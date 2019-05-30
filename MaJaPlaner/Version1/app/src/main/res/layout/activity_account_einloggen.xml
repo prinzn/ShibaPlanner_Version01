@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/hintergrund_farbe"
+    tools:context=".Account_Einloggen">
+
+    <ImageView
+        android:id="@+id/imageView_einloggen_logo"
+
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_mit_hintergrund" />
+
+    <EditText
+        android:id="@+id/editText_einloggen_nutzername"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableStart="@drawable/ic_person_24dp"
+        android:gravity="center"
+        android:hint="@string/nutzername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_einloggen_logo" />
+
+    <EditText
+        android:id="@+id/editText_einloggen_passwort"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:drawableStart="@drawable/ic_lock_24dp"
+        android:gravity="center"
+        android:hint="@string/passwort"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_einloggen_nutzername" />
+
+    <TextView
+        android:id="@+id/txt_einloggen_pswVergessen"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/hussartani"
+        android:text="@string/passwortvergessen"
+        android:textColor="@color/blaugrau"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_einloggen_passwort" />
+
+    <TextView
+        android:id="@+id/txt_einloggen_keinAccount"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/hussartani"
+        android:text="@string/keinaccount"
+        android:textColor="@color/blaugrau"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_einloggen_ZuaccountErstellen"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/hussartani"
+        android:text="@string/erstellen"
+        android:textColor="@color/blaugrau"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_einloggen_keinAccount" />
+
+    <Button
+        android:id="@+id/btn_einloggen"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/einloggen_button_hintergrund"
+        android:gravity="center"
+        android:text="@string/einloggen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_einloggen_passwort" />
+
+</android.support.constraint.ConstraintLayout>

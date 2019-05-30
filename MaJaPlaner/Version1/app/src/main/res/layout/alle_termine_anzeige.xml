@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dp">
+
+    <!-- Farbe des Termins -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_farbe_Des_Termins"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:background="@drawable/terminverwaltung_btn"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp" />
+
+    <!-- Title des Termins -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_txt_Titel_Termin"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@id/termineAktuellerTag_txt_Beschreibung_Termin"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/termineAktuellerTag_farbe_Des_Termins"
+        android:fontFamily="@font/hussartani"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Titel"
+        android:textColor="@color/blaugrau"
+        android:textSize="16sp" />
+
+    <!-- Informationen zum Termin -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_txt_Beschreibung_Termin"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/termineAktuellerTag_farbe_Des_Termins"
+        android:fontFamily="@font/hussartani"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Beschreibung"
+        android:textColor="@color/blaugrau"
+        android:textSize="14sp" />
+
+</RelativeLayout>

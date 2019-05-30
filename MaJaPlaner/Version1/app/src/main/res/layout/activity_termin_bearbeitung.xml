@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hintergrund_farbe"
+    android:orientation="vertical"
+    tools:context=".termin.Termin_Bearbeitung_GUI">
+
+    <!-- - - - - - - - - - Informationen - - - - - - - - - -->
+    <!-- Termintitel -->
+    <EditText
+        android:id="@+id/txt_Terminbearbeitung_Eingabe_Titel"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:hint="@string/titel"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="25dp"
+        android:background="@null"
+        android:paddingEnd="25dp"
+        android:textColorHint="@color/blaugrau"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Terminbearbeitung_oeffne_ColorPicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Farbe -->
+    <Button
+        android:id="@+id/btn_Terminbearbeitung_oeffne_ColorPicker"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/terminverwaltung_btn"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_Terminbearbeitung_Eingabe_Titel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Terminanzeige ob Termin ganztägig ist -->
+    <!-- Ganztägig -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Beschriftung_Ganztaegig"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/terminverwaltung_btn"
+        android:gravity="start"
+        android:padding="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/zeit"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/txt_Terminbearbeitung_Eingabe_Titel" />
+
+    <Switch
+        android:id="@+id/switch_Terminbearbeitung_Eingabe_JaNein"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/txt_Terminbearbeitung_Beschriftung_Ganztaegig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Startdatum -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Eingabe_Datum_Start"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:hint="@string/datumFormat"
+        android:textColor="@color/blaugrau"
+        app:layout_constraintEnd_toStartOf="@id/txt_Terminbearbeitung_Eingabe_Zeit_Start"
+        app:layout_constraintStart_toEndOf="@+id/txt_Terminbearbeitung_Beschriftung_Start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Beschriftung_Ganztaegig" />
+
+    <!-- Startzeit -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Eingabe_Zeit_Start"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="@string/zeitFormat"
+        android:textColor="@color/blaugrau"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_Terminbearbeitung_Eingabe_Datum_Start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Beschriftung_Ganztaegig" />
+
+    <!-- Enddatum -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Eingabe_Datum_Ende"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:hint="@string/datumFormat"
+        android:textColor="@color/blaugrau"
+        app:layout_constraintEnd_toStartOf="@id/txt_Terminbearbeitung_Eingabe_Zeit_Ende"
+        app:layout_constraintStart_toEndOf="@+id/txt_Terminbearbeitung_Beschriftung_Ende"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Eingabe_Datum_Start" />
+
+    <!-- Endzeit -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Eingabe_Zeit_Ende"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="@string/zeitFormat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_Terminbearbeitung_Eingabe_Datum_Ende"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Eingabe_Zeit_Start" />
+
+    <!-- - - - - - - - - - Beschriftungen - - - - - - - - - -->
+    <!-- Von/ Am -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Beschriftung_Start"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/start"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/txt_Terminbearbeitung_Eingabe_Datum_Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Beschriftung_Ganztaegig" />
+
+    <!-- Bis -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Beschriftung_Ende"
+
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txt_Terminbearbeitung_Beschriftung_Ganztaegig"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@id/txt_Terminbearbeitung_Eingabe_Datum_Ende"
+        android:text="@string/ende"
+        android:textAllCaps="true"
+        android:textColor="@color/blaugrau"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/txt_Terminbearbeitung_Eingabe_Datum_Ende"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Beschriftung_Start" />
+
+    <!-- Notizen -->
+    <EditText
+        android:id="@+id/txt_Terminbearbeitung_Notizen"
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:hint="@string/notizen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Beschriftung_Ende" />
+
+    <!-- - - - - - - - - - Menü - - - - - - - - - - - - - - -->
+    <!-- Abbrechen/ Zurück zum Kalender -->
+    <ImageButton
+        android:id="@+id/btn_Terminbearbeitung_Abbrechen"
+
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/terminverwaltung_btn"
+        android:src="@drawable/ic_abbrechen"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_Terminbearbeitung_Speichern"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Speichern -->
+    <Button
+        android:id="@+id/btn_Terminbearbeitung_Speichern"
+
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/terminverwaltung_btn"
+        android:fontFamily="@font/hussartani"
+        android:text="@string/speichern"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintStart_toEndOf="@id/btn_Terminbearbeitung_Abbrechen" />
+
+</android.support.constraint.ConstraintLayout>

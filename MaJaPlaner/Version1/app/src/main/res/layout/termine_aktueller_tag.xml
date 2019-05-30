@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Farbe des Termins -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_farbe_Des_Termins"
+
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/termineAktuellerTag_txt_Beschreibung_Termin"/>
+
+    <!-- Startzeit -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_txt_Startzeit"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/termineAktuellerTag_farbe_Des_Termins"
+        app:layout_constraintBottom_toTopOf="@id/termineAktuellerTag_txt_Endzeit"
+        app:layout_constraintEnd_toStartOf="@id/termineAktuellerTag_guideline"
+        app:layout_constraintBaseline_toBaselineOf="@id/termineAktuellerTag_txt_Titel_Termin"
+        android:fontFamily="@font/hussartani"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textStyle="bold"
+        android:text="06:11"
+        android:textColor="@color/blaugrau"
+        android:textSize="15sp" />
+
+    <!-- Endzeit -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_txt_Endzeit"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/termineAktuellerTag_txt_Startzeit"
+        app:layout_constraintStart_toStartOf="@id/termineAktuellerTag_farbe_Des_Termins"
+        app:layout_constraintBaseline_toBaselineOf="@id/termineAktuellerTag_txt_Beschreibung_Termin"
+        app:layout_constraintEnd_toStartOf="@id/termineAktuellerTag_guideline"
+        android:fontFamily="@font/hussartani"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="06:11"
+        android:textColor="@color/blaugrau"
+        android:textSize="15sp" />
+
+    <!-- Title des Termins -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_txt_Titel_Termin"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/termineAktuellerTag_guideline"
+        android:fontFamily="@font/hussartani"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Titel"
+        android:textColor="@color/blaugrau"
+        android:textSize="23sp" />
+
+    <!-- Informationen zum Termin -->
+    <TextView
+        android:id="@+id/termineAktuellerTag_txt_Beschreibung_Termin"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/termineAktuellerTag_txt_Titel_Termin"
+        app:layout_constraintStart_toEndOf="@id/termineAktuellerTag_guideline"
+        android:fontFamily="@font/hussartani"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Beschreibung"
+        android:textColor="@color/blaugrauTransparentER"
+        android:textSize="20sp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/termineAktuellerTag_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="67dp" />
+
+</android.support.constraint.ConstraintLayout>

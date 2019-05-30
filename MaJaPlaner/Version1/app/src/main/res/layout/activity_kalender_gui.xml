@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/hintergrund_farbe"
+    tools:context=".kalender.Kalender_GUI">
+
+    <!-- - - - - - - - - - Hintergrund - - - - - - - -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_monatsanzeige"
+        android:src="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/fragment_monatsanzeige"/>
+
+    <!-- - - - - - - - - - Menü - - - - - - - - - - - -->
+    <!-- Zum heutige Tag -->
+    <ImageButton
+        android:id="@+id/txt_Kalender_HeutigerTag"
+
+        style="@style/SchriftStandard"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_termin"
+        android:textColor="@color/blaugrau"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/txt_Kalender_Monat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Anzeige des Monatsnamen-->
+    <TextView
+        android:id="@+id/txt_Kalender_Monat"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/hussartani"
+        android:gravity="center"
+        android:text="@string/beispiel"
+        android:textColor="@color/blaugrau"
+        android:textSize="40sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- - - - - - - - - - Monatsanzeige - - - - - - - -->
+    <fragment
+        android:id="@+id/fragment_monatsanzeige"
+        android:name="prinzn.jana.majaplanerversion1.kalender.Kalender_Fragment_Monat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_Kalender_Monat" />
+
+    <!-- - - - - Anzeige des angeklickten Datums - - - -->
+    <TextView
+        android:id="@+id/txt_Kalender_Momentanes_Datum"
+
+        style="@style/SchriftStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/datumFormat"
+        android:textColor="@color/blaugrau"
+        app:layout_constraintTop_toBottomOf="@id/fragment_monatsanzeige" />
+
+    <!-- - - - - Anzeige der Termine des Tages - - - - -->
+    <ListView
+        android:id="@+id/listView_Termine"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:layout_marginStart="20dp"
+        android:divider="@color/transparent"
+        android:dividerHeight="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_kalender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_Kalender_Momentanes_Datum">
+
+    </ListView>
+
+    <!-- - - - - - - - - - Navigation - - - - - - - - - -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav_kalender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="16dp"
+        android:background="@android:color/white"
+        app:itemIconTint="@color/blaugrauTransparent"
+        app:itemTextColor="@color/blaugrauTransparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <!-- - - - - - - Add Button für neuen Termin - - - -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_neuerTermin"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:backgroundTint="@color/blaugrau"
+        app:layout_constraintBottom_toTopOf="@+id/nav_kalender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add" />
+
+</android.support.constraint.ConstraintLayout>

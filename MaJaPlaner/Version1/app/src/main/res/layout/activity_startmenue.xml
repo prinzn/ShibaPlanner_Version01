@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/hintergrund_farbe"
+    tools:context=".Startmenue">
+
+    <!-- - - - - - - - - - Informationen - - - - - - - - - -->
+    <!-- Halbkreis -->
+    <ImageView
+        android:id="@+id/image_startbildschirm_halbkreis"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/startbilschirm_halbkreis" />
+
+    <!-- Halbkreislinie -->
+    <ImageView
+        android:id="@+id/image_startbildschirm_halbkreislinie"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/startbilschirm_halbkreislinie" />
+
+    <!-- Begrüßung -->
+    <TextView
+        android:id="@+id/txt_Startbildschirm_Begrueßung_1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/vintageparty"
+        android:text="@string/guten"
+        android:textColor="@color/blaugrau"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_startbildschirm"
+        app:layout_constraintEnd_toEndOf="@id/guideline_ver_startbildschirm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/txt_Startbildschirm_Begrueßung_2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vintageparty"
+        android:paddingEnd="10dp"
+        android:paddingStart="0dp"
+        android:text="@string/hallo"
+        android:textColor="@color/blaugrau"
+        android:textSize="47sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_startbildschirm"
+        app:layout_constraintEnd_toEndOf="@id/guideline_ver_startbildschirm"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Datum -->
+    <TextView
+        android:id="@+id/txt_Startbildschirm_Datum"
+
+        style="@style/SchriftStartbildschirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hussartani"
+        android:text="@string/datumFormat"
+        android:textColor="@color/blaugrau"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_ver_startbildschirm"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_hor_startbildschirm" />
+
+    <!-- - - - - - - - - - Menü - - - - - - - - - -->
+    <!-- Button Kalender -->
+    <ImageButton
+        android:id="@+id/btn_Startbildschirm_ZuKalender"
+
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/startbildschirm_btn"
+        android:src="@drawable/ic_kalender"
+        android:contentDescription="@string/zumKalender"
+        app:layout_constraintCircle="@+id/image_startbildschirm_halbkreislinie"
+        app:layout_constraintCircleAngle="40"
+        app:layout_constraintCircleRadius="135dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Text Kalender -->
+    <TextView
+        android:id="@+id/txt_startbildschirm_kalender"
+
+        style="@style/SchriftStartbildschirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zumKalender"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_Startbildschirm_ZuKalender"
+        app:layout_constraintStart_toEndOf="@id/btn_Startbildschirm_ZuKalender"
+        app:layout_constraintTop_toTopOf="@id/btn_Startbildschirm_ZuKalender"/>
+
+    <!-- Button Termine -->
+    <ImageButton
+        android:id="@+id/btn_Startbildschirm_ZuAlleTermine"
+
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/startbildschirm_btn"
+        android:src="@drawable/ic_termin"
+        android:contentDescription="@string/zuTermineUebersicht"
+        app:layout_constraintCircle="@+id/image_startbildschirm_halbkreislinie"
+        app:layout_constraintCircleAngle="73"
+        app:layout_constraintCircleRadius="125dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Text Termine -->
+    <TextView
+        android:id="@+id/txt_startbildschirm_termine"
+
+        style="@style/SchriftStartbildschirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zuTermineUebersicht"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_Startbildschirm_ZuAlleTermine"
+        app:layout_constraintStart_toEndOf="@id/btn_Startbildschirm_ZuAlleTermine"
+        app:layout_constraintTop_toTopOf="@id/btn_Startbildschirm_ZuAlleTermine"/>
+
+    <!-- Button Empty -->
+    <ImageButton
+        android:id="@+id/empty"
+
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/startbildschirm_btn"
+        android:src="@drawable/ic_person_24dp"
+        android:contentDescription="@string/einloggen"
+        app:layout_constraintCircle="@+id/image_startbildschirm_halbkreislinie"
+        app:layout_constraintCircleAngle="106"
+        app:layout_constraintCircleRadius="125dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Text Empty -->
+    <TextView
+        android:id="@+id/txt_startbildschirm_empty"
+
+        style="@style/SchriftStartbildschirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/einloggen"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/empty"
+        app:layout_constraintStart_toEndOf="@id/empty"
+        app:layout_constraintTop_toTopOf="@id/empty"/>
+
+    <!-- Button Einstellungen -->
+    <ImageButton
+        android:id="@+id/btn_Startbildschirm_ZuEinstellungen"
+
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/startbildschirm_btn"
+        android:src="@drawable/ic_einstellungen"
+        android:contentDescription="@string/zuEinstellungen"
+        app:layout_constraintCircle="@+id/image_startbildschirm_halbkreislinie"
+        app:layout_constraintCircleAngle="140"
+        app:layout_constraintCircleRadius="135dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Text Einstellungen -->
+    <TextView
+        android:id="@+id/txt_startbildschirm_einstellungen"
+
+        style="@style/SchriftStartbildschirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zuEinstellungen"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_Startbildschirm_ZuEinstellungen"
+        app:layout_constraintStart_toEndOf="@id/btn_Startbildschirm_ZuEinstellungen"
+        app:layout_constraintTop_toTopOf="@id/btn_Startbildschirm_ZuEinstellungen"/>
+
+    <!-- - - - - - - - - - Guidlines - - - - - - -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_hor_startbildschirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_ver_startbildschirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.41" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kalender.Kalender_GUI">
+    <!-- - - - - - - - - - Wochentage - - - - - - - - - -->
+    <TableRow
+        android:id="@+id/zeileWochentage"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Montag -->
+        <TextView
+            android:id="@+id/txt_Kalender_Mo"
+            style="@style/WochentageStyle"
+            android:text="@string/montag" />
+
+        <!-- Dienstag -->
+        <TextView
+            android:id="@+id/txt_Kalender_Di"
+            style="@style/WochentageStyle"
+            android:text="@string/dienstag" />
+
+        <!-- Mittwoch -->
+        <TextView
+            android:id="@+id/txt_Kalender_Mi"
+            style="@style/WochentageStyle"
+            android:text="@string/mittwoch" />
+
+        <!-- Donnerstag -->
+        <TextView
+            android:id="@+id/txt_Kalender_Do"
+            style="@style/WochentageStyle"
+            android:text="@string/donnerstag" />
+
+        <!-- Freitag -->
+        <TextView
+            android:id="@+id/txt_Kalender_Fr"
+            style="@style/WochentageStyle"
+            android:text="@string/freitag" />
+
+        <!-- Samstag -->
+        <TextView
+            android:id="@+id/txt_Kalender_Sa"
+            style="@style/WochentageStyle"
+            android:text="@string/samstag" />
+
+        <!-- Sonntag -->
+        <TextView
+            android:id="@+id/txt_Kalender_So"
+            style="@style/WochentageStyle"
+            android:text="@string/sonntag" />
+    </TableRow>
+
+    <!-- - - - - - - - - - Monatsanzeige - - - - - - - -->
+    <GridView
+        android:id="@+id/gridView_Kalender_Tabelle_AktuellerMonat"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:numColumns="7"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@id/zeileWochentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
