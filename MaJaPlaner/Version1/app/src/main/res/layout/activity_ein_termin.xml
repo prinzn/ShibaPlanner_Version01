@@ -17,6 +17,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
+        android:lines="1"
+        android:singleLine="true"
         android:gravity="center"
         android:hint="@string/titel"
         android:paddingStart="25dp"
@@ -142,9 +144,28 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:hint="@string/keinenotizen"
+        android:lines="1"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_Ein_Termin_Beschriftung_Ende" />
+
+    <!-- Freunde -->
+    <TextView
+        android:id="@+id/txt_Ein_Termin_Freunde"
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:lines="1"
+        android:singleLine="true"
+        android:hint="@string/zuFreunden"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Ein_Termin_Notizen" />
 
     <!-- - - - - - - - - - Beschriftungen - - - - - - - - - -->
     <!-- Von/ Am -->

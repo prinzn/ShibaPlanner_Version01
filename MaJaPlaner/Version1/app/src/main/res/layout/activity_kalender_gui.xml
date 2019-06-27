@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/hintergrund_farbe"
-    tools:context=".kalender.Kalender_GUI">
+    tools:context=".Kalender.Kalender_GUI">
 
     <!-- - - - - - - - - - Hintergrund - - - - - - - -->
     <ImageView
@@ -56,7 +56,7 @@
     <!-- - - - - - - - - - Monatsanzeige - - - - - - - -->
     <fragment
         android:id="@+id/fragment_monatsanzeige"
-        android:name="prinzn.jana.majaplanerversion1.kalender.Kalender_Fragment_Monat"
+        android:name="prinzn.jana.majaplanerversion1.Kalender.Kalender_Fragment_Monat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -85,9 +85,9 @@
         android:layout_height="0dp"
         android:padding="5dp"
         android:layout_marginStart="20dp"
-        android:divider="@color/transparent"
+        android:divider="@null"
         android:dividerHeight="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_kalender"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kalender_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_Kalender_Momentanes_Datum">
@@ -95,29 +95,72 @@
     </ListView>
 
     <!-- - - - - - - - - - Navigation - - - - - - - - - -->
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/nav_kalender"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_kalender_freunde"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_freunde"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zuFreunden"
+        android:textSize="12sp"
+        android:textColor="@color/blaugrauTransparent"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_kalender_home"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_kalender_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_home"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zumStartbildschirm"
+        android:textSize="12sp"
+        android:textColor="@color/blaugrauTransparent"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_kalender_kalender"
+        app:layout_constraintStart_toEndOf="@+id/btn_kalender_freunde"/>
+
+    <Button
+        android:id="@+id/btn_kalender_kalender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_kalender"
+        android:drawableTint="@android:color/white"
+        android:text="@string/zumKalender"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_kalender_termine"
+        app:layout_constraintStart_toEndOf="@+id/btn_kalender_home"/>
+
+    <Button
+        android:id="@+id/btn_kalender_termine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_termin"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zuTermineUebersicht"
+        android:textSize="12sp"
+        android:textColor="@color/blaugrauTransparent"
+        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:elevation="16dp"
-        android:background="@android:color/white"
-        app:itemIconTint="@color/blaugrauTransparent"
-        app:itemTextColor="@color/blaugrauTransparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:layout_constraintStart_toEndOf="@+id/btn_kalender_kalender"/>
 
     <!-- - - - - - - Add Button für neuen Termin - - - -->
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_neuerTermin"
+        android:id="@+id/fab_kalender_neuerTermin"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         app:backgroundTint="@color/blaugrau"
-        app:layout_constraintBottom_toTopOf="@+id/nav_kalender"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kalender_termine"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_add" />
 

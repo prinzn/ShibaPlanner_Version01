@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -57,24 +57,29 @@
     <TextView
         android:id="@+id/termineAktuellerTag_txt_Titel_Termin"
 
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/termineAktuellerTag_guideline"
         android:fontFamily="@font/hussartani"
         android:gravity="center_vertical"
+        android:outlineProvider="none"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:text="Titel"
         android:textColor="@color/blaugrau"
-        android:textSize="23sp" />
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/termineAktuellerTag_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Informationen zum Termin -->
     <TextView
         android:id="@+id/termineAktuellerTag_txt_Beschreibung_Termin"
 
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toBottomOf="@+id/termineAktuellerTag_txt_Titel_Termin"
         app:layout_constraintStart_toEndOf="@id/termineAktuellerTag_guideline"
         android:fontFamily="@font/hussartani"
@@ -89,6 +94,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="67dp" />
+        app:layout_constraintGuide_begin="90dp" />
 
 </android.support.constraint.ConstraintLayout>

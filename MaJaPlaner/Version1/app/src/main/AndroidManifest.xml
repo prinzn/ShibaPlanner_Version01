@@ -12,22 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".termin.Termin_Erstellung_GUI"/>
-        <activity android:name=".termin.Termin_Bearbeitung_GUI" />
+        <activity android:name=".Termin.Termin_Erstellung_GUI" />
+        <activity android:name=".Termin.Termin_Bearbeitung_GUI" />
         <activity android:name=".Startmenue">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Account_Registrieren" />
-        <activity android:name=".Account_Einloggen" />
-        <activity android:name=".termin.Termindetails" />
-        <activity android:name=".Terminuebersicht" />
-        <activity android:name=".kalender.Kalender_GUI" />
+        <activity android:name=".Account.Account_Registrieren" />
+        <activity android:name=".Account.Account_Einloggen" />
+        <activity android:name=".Termin.Termindetails" />
+        <activity android:name=".Terminuebersicht.Terminuebersicht" />
+        <activity android:name=".Kalender.Kalender_GUI" />
+        <activity android:name=".Freunde.Freunde" />
     </application>
 
 </manifest>

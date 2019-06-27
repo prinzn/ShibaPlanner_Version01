@@ -1,11 +1,8 @@
 package prinzn.jana.majaplanerversion1;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -13,15 +10,17 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-import prinzn.jana.majaplanerversion1.kalender.Kalender_GUI;
-import prinzn.jana.majaplanerversion1.kalender.Kalender_Steuerung;
+import prinzn.jana.majaplanerversion1.Account.Account_Einloggen;
+import prinzn.jana.majaplanerversion1.Freunde.Freunde;
+import prinzn.jana.majaplanerversion1.Terminuebersicht.Terminuebersicht;
+import prinzn.jana.majaplanerversion1.Kalender.Kalender_GUI;
 
 public class Startmenue extends AppCompatActivity {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //Attribute
     /*-------------------------Darstellung--------------------------------------------------------*/
-    private ImageButton btnZuEinstellungen, btnZumKalender, btnZuAlleTermine, btnAccount;
+    private ImageButton btnZuFreunden, btnZumKalender, btnZuAlleTermine, btnAccount;
     private TextView txtDatum, txtBegruessung1, txtBegruessung2;
 
     /*-------------------------Andere Variablen---------------------------------------------------*/
@@ -32,28 +31,17 @@ public class Startmenue extends AppCompatActivity {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //Methoden
+
+    /*-------------------------Set Methoden-------------------------------------------------------*/
+
+    /*-------------------------Get Methoden-------------------------------------------------------*/
+
+    /*-------------------------public Methoden----------------------------------------------------*/
+
     /*-------------------------private Methoden---------------------------------------------------*/
-    private void oeffneActifityKalender() {
-        Intent intent = new Intent(this, Kalender_GUI.class);
-        //Info über den zuletzt geöffneten Monat(& Jahr)
-        intent.putExtra(Kalender_Steuerung.LETZTER_MONAT_UEBERGABE, "" + Kalender_Steuerung.KALENDER.get(Calendar.MONTH));
-        intent.putExtra(Kalender_Steuerung.LETZTES_JAHR_UEBERGABE, "" + Kalender_Steuerung.KALENDER.get(Calendar.YEAR));
-        startActivity(intent);  //Kalender- Activity wird geöffnet
-    }
-
-    private void oeffneActifityAlleTermine() {
-        Intent intent = new Intent(this, Terminuebersicht.class);
-        startActivity(intent);  //Alle Termine- Activity wird geöffnet
-    }
-
-    private void oeffneActifityEinloggen() {
-        Intent intent = new Intent(this, Account_Einloggen.class);
-        startActivity(intent);  //Einloggen- Activity wird geöffnet
-    }
-
     private void initialisieren() {
         btnZumKalender = findViewById(R.id.btn_Startbildschirm_ZuKalender);
-        btnZuEinstellungen = findViewById(R.id.btn_Startbildschirm_ZuEinstellungen);
+        btnZuFreunden = findViewById(R.id.btn_Startbildschirm_ZuFreunden);
         btnAccount = findViewById(R.id.empty);
         txtDatum = findViewById(R.id.txt_Startbildschirm_Datum);
         txtBegruessung2 = findViewById(R.id.txt_Startbildschirm_Begrueßung_2);
@@ -65,10 +53,11 @@ public class Startmenue extends AppCompatActivity {
 
     private void setztenDerOnClickListener() {
         //OnCLickListener rufen Methoden in der Steuerung auf
-        btnZuEinstellungen.setOnClickListener(new View.OnClickListener() {
+        btnZuFreunden.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //so much empty...
+                btnZuFreunden.setEnabled(false);   //Button soll nicht mehrfach gecklickt werden können
+                oeffneActifityFreunde();
             }
         });
         btnZumKalender.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +78,7 @@ public class Startmenue extends AppCompatActivity {
         btnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnAccount.setEnabled(false);
+                btnAccount.setEnabled(false);   //Button soll nicht mehrfach gecklickt werden können
                 oeffneActifityEinloggen();
             }
         });
@@ -124,14 +113,44 @@ public class Startmenue extends AppCompatActivity {
         }
     }
 
-    /*-------------------------Override Methoden--------------------------------------------------*/
+    /*-------------------------oeffnen anderer Activities - Methoden------------------------------*/
+    private void oeffneActifityKalender() {
+        Intent intent = new Intent(this, Kalender_GUI.class);
+        startActivity(intent);  //Kalender- Activity wird geöffnet
+        overridePendingTransition(R.anim.slide_in_nach_rechts, R.anim.slide_aus_nach_links); // Neue Animation einstellen
+    }
+
+    private void oeffneActifityAlleTermine() {
+        Intent intent = new Intent(this, Terminuebersicht.class);
+        startActivity(intent);  //Alle Termine- Activity wird geöffnet
+        overridePendingTransition(R.anim.slide_in_nach_rechts, R.anim.slide_aus_nach_links); // Neue Animation einstellen
+    }
+
+    private void oeffneActifityEinloggen() {
+        Intent intent = new Intent(this, Account_Einloggen.class);
+        startActivity(intent);  //Einloggen- Activity wird geöffnet
+        overridePendingTransition(R.anim.slide_in_nach_rechts, R.anim.slide_aus_nach_links); // Neue Animation einstellen
+    }
+
+    private void oeffneActifityFreunde() {
+        Intent intent = new Intent(this, Freunde.class);
+        startActivity(intent);  //Freunde- Activity wird geöffnet
+        overridePendingTransition(R.anim.slide_in_nach_links, R.anim.slide_aus_nach_rechts); // Neue Animation einstellen
+    }
+
+    /*-------------------------override Methoden--------------------------------------------------*/
     @Override
     public void onBackPressed() {
         finish();
     } //App wird beendet, wenn die Rücktaste benutzt wurde
 
+    @Override
+    public void finish() {
+        super.finish();
+    }
+
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    //Erstellung der Activity
+    // Acticity erstellung
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,8 +164,9 @@ public class Startmenue extends AppCompatActivity {
         btnZumKalender.setEnabled(true);
         btnZuAlleTermine.setEnabled(true);
         btnAccount.setEnabled(true);
+        btnZuFreunden.setEnabled(true);
     }
-
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    //Ende der Klasse
+    //Ender der Klasse
+
 }

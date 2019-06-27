@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hintergrund_farbe"
+    android:orientation="vertical"
+    tools:context=".Freunde.Freunde">
+
+    <!-- - - - - - - - - - Freunde Anfragen - - - - - - - - - -->
+    <TextView
+        android:id="@+id/txt_freunde_freundeAnfragen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/hussartani"
+        android:text="@string/anfragen"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Liste der Anfragen -->
+    <ListView
+        android:id="@+id/listView_alleAnfragen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_freunde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_freunde_freundeAnfragen" />
+
+    <!-- - - - - - - - - - Freunde - - - - - - - - - -->
+    <TextView
+        android:id="@+id/txt_freunde_freunde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:fontFamily="@font/hussartani"
+        android:text="@string/freunde"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_freunde" />
+
+    <!-- Liste der Anfragen -->
+    <ListView
+        android:id="@+id/listView_alleFreunde"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_freunde_freunde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_freunde_home" />
+
+    <!-- - - - - - - - - - Navigation - - - - - - - - - -->
+
+    <Button
+        android:id="@+id/btn_freunde_Zufreunde"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_freunde"
+        android:textColor="@android:color/white"
+        android:text="@string/zuFreunden"
+        android:drawableTint="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_freunde_home"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_freunde_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_home"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zumStartbildschirm"
+        android:textColor="@color/blaugrauTransparent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_freunde_kalender"
+        app:layout_constraintStart_toEndOf="@+id/btn_freunde_Zufreunde" />
+
+    <Button
+        android:id="@+id/btn_freunde_kalender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_kalender"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zumKalender"
+        android:textColor="@color/blaugrauTransparent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_freunde_termine"
+        app:layout_constraintStart_toEndOf="@+id/btn_freunde_home" />
+
+    <Button
+        android:id="@+id/btn_freunde_termine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_termin"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zuTermineUebersicht"
+        android:textColor="@color/blaugrauTransparent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_freunde_kalender" />
+
+
+    <!-- - - - - - - Add Button für neuen Termin - - - -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_freunde_addFreunde"
+
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        app:backgroundTint="@color/blaugrau"
+        app:layout_constraintBottom_toTopOf="@+id/btn_freunde_termine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add" />
+
+    <!-- - - - - - - - - - Guilines - - - - - - - - - - - -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_freunde"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+</android.support.constraint.ConstraintLayout>

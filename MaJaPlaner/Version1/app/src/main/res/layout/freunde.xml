@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/weißTransparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Freundesname -->
+    <TextView
+        android:id="@+id/txt_freunde_name"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/freunde_guideline"
+        android:fontFamily="@font/hussartani"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/blaugrau"
+        android:textSize="15sp" />
+
+
+    <!-- Btn ablehnen -->
+    <ImageButton
+        android:id="@+id/btn_freunde_ablehnen"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_ablehnen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/freunde_guideline"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/freunde_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+</android.support.constraint.ConstraintLayout>

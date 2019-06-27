@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/hintergrund_farbe"
+android:orientation="vertical"
+tools:context=".Termin.KontakteEinladen">
+
+<!-- - - - - - - - - - Freunde Auswahl - - - - - - - - - -->
+<TextView
+    android:id="@+id/txt_kontakteEinladen_freunde"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:layout_marginTop="10dp"
+    android:fontFamily="@font/hussartani"
+    android:text="@string/zuFreunden"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<!-- Liste der Anfragen -->
+<ListView
+    android:id="@+id/listView_kontakteEinladen_freunde"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:divider="@null"
+    android:dividerHeight="10dp"
+    android:padding="5dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/txt_kontakteEinladen_freunde" />
+
+</android.support.constraint.ConstraintLayout>

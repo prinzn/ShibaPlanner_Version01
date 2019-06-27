@@ -1,0 +1,113 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">MaJa Planer</string>
+
+    <string name="beispiel">example</string>
+
+    <!-- Activity Startbildschirm -->
+    <string name="guten">good</string>
+    <string name="gute">good</string>
+    <string name="schoenen">nice</string>
+    <string name="morgen">morning</string>
+    <string name="mittag">noon</string>
+    <string name="abend">evening</string>
+    <string name="nacht">night</string>
+    <string name="hallo">Hello</string>
+
+    <string name="zuFreunden">Friends</string>
+    <string name="zumStartbildschirm">Home</string>
+    <string name="zumKalender">Calendar</string>
+    <string name="zuTermineUebersicht">Appointment</string>
+    <string name="Empty">Empty</string>
+    <string name="ganzer">whole</string>
+
+    <!-- Activity Terminerstellung -->
+    <string name="titel">Enter title</string>
+    <string name="ganztaegig">whole day</string>
+    <string name="zeit">Time</string>
+    <string name="start">from</string>
+    <string name="am">On</string>
+    <string name="ende">to</string>
+    <string name="datumFormat">mm.tt.yyyy</string>
+    <string name="zeitFormat">HH:mm</string>
+    <string name="speichern">save</string>
+    <string name="notizen">notes to the appointment</string>
+
+    <!-- Activity ein Termin -->
+    <string name="bearbeiten">edit</string>
+    <string name="keinenotizen">No notes available</string>
+
+    <!-- Activity Freunde -->
+    <string name="anfragen">Requests</string>
+    <string name="freunde">Friends</string>
+
+    <!-- Activity Account_Einloggen -->
+    <string name="nutzername">user name</string>
+    <string name="passwort">********</string>
+    <string name="passwortvergessen">Forgot password?</string>
+    <string name="keinaccount">Still no account?</string>
+    <string name="erstellen">create</string>
+    <string name="einloggen">Log-in</string>
+
+    <!-- Activity Accounterstellung -->
+    <string name="email">E-Mail</string>
+    <string name="bereitsaccount">already an account?</string>
+
+    <!-- Text für Toast in Terminerstellung -->
+    <string name="toastTerminGespeichert">Appointment was saved</string>
+    <string name="toastDatenFalsch">Min. a date or time is wrong!</string>
+    <string name="toastTitelFehlt">Please enter title</string>
+
+    <!-- Wochentage für Kalender Activity -->
+    <string name="montag">Mo</string>
+    <string name="dienstag">Tu</string>
+    <string name="mittwoch">We</string>
+    <string name="donnerstag">Th</string>
+    <string name="freitag">Fr</string>
+    <string name="samstag">Sa</string>
+    <string name="sonntag">Su</string>
+
+    <!-- Monate für Kalender Activity -->
+    <string-array name="monate">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="farbenfuercolorpicker">
+        <item>#F6402C</item>
+        <item>#EB1460</item>
+        <item>#9C1AB1</item>
+        <item>#6633B9</item>
+        <item>#3D4DB7</item>
+        <item>#1093F5</item>
+        <item>#00A6F6</item>
+        <item>#00BBD5</item>
+        <item>#009687</item>
+        <item>#46AF4A</item>
+        <item>#88C440</item>
+        <item>#CCDD1E</item>
+        <item>#FFEC16</item>
+        <item>#FFC100</item>
+        <item>#FF9800</item>
+        <item>#FF5505</item>
+        <item>#7A5547</item>
+        <item>#9D9D9D</item>
+        <item>#5E7C8B</item>
+        <item>#394046</item>
+    </string-array>
+
+    <string name="waehlefarbe">Choose a color:</string>
+    <string name="toastKeineTermineGefunden">No appointments found</string>
+    <string name="hierSucheEingeben">Enter search here</string>
+
+</resources>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/hintergrund_farbe"
-    tools:context=".Account_Einloggen">
+    tools:context=".Account.Account_Einloggen">
 
     <ImageView
         android:id="@+id/imageView_einloggen_logo"
@@ -28,7 +28,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
-        android:drawableStart="@drawable/ic_person_24dp"
+        android:drawableStart="@drawable/ic_user"
         android:gravity="center"
         android:hint="@string/nutzername"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
-        android:drawableStart="@drawable/ic_lock_24dp"
+        android:drawableStart="@drawable/ic_passwort"
         android:gravity="center"
         android:hint="@string/passwort"
         android:inputType="textPassword"

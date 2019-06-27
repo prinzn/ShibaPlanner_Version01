@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="akzentfarbe">#394046</color>
-
-    <color name="transparent">#00696969</color>
-
     <color name="blaugrau">#394046</color>
-    <color name="blaugrauDunkel">#24292C</color>
     <color name="blaugrauTransparent">#b7394046</color>
     <color name="blaugrauTransparentER">#5e394046</color>
     <color name="weißTransparent">#5EFFFFFF</color>
-
-    <color name="hellgrau">#8DB4B4B4</color>
-    <color name="detailfarbe">#009688</color>
-    <color name="detailfarbehell">#54009688</color>
-
 </resources>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/hintergrund_farbe"
     android:orientation="vertical"
-    tools:context=".termin.Termin_Bearbeitung_GUI">
+    tools:context=".Termin.Termin_Bearbeitung_GUI">
 
     <!-- - - - - - - - - - Informationen - - - - - - - - - -->
     <!-- Termintitel -->
@@ -22,7 +22,9 @@
         android:gravity="center"
         android:hint="@string/titel"
         android:inputType="text"
-        android:maxLines="1"
+        android:lines="1"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
         android:paddingStart="25dp"
         android:background="@null"
         android:paddingEnd="25dp"
@@ -191,10 +193,30 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:background="@null"
+        android:lines="1"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
         android:hint="@string/notizen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Beschriftung_Ende" />
+
+    <!-- Freunde -->
+    <TextView
+        android:id="@+id/txt_Terminbearbeitung_Freunde"
+        style="@style/SchriftTerminverwaltung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:lines="1"
+        android:singleLine="true"
+        android:hint="@string/zuFreunden"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Terminbearbeitung_Notizen" />
 
     <!-- - - - - - - - - - Menü - - - - - - - - - - - - - - -->
     <!-- Abbrechen/ Zurück zum Kalender -->

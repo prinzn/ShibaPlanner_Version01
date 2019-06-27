@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/weißTransparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Freundesname -->
+    <TextView
+        android:id="@+id/txt_freundeAnfrage_name"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/freundeAnfrage_guideline"
+        android:fontFamily="@font/hussartani"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/blaugrau"
+        android:textSize="15sp" />
+
+
+    <!-- Btn annehmen -->
+    <ImageButton
+        android:id="@+id/btn_freundeAnfrage_annehmen"
+
+        android:layout_width="0dp"
+        android:src="@drawable/ic_akzeptieren"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_freundeAnfrage_ablehnen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/freundeAnfrage_guideline"/>
+
+    <!-- Btn ablehnen -->
+    <ImageButton
+        android:id="@+id/btn_freundeAnfrage_ablehnen"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_ablehnen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_freundeAnfrage_annehmen"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/freundeAnfrage_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+</android.support.constraint.ConstraintLayout>

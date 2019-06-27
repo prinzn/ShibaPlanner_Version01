@@ -1,48 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/hintergrund_farbe"
-    tools:context=".Terminuebersicht">
+    android:orientation="vertical"
+    tools:context=".Terminuebersicht.Terminuebersicht">
+
+    <!-- - - - - - - - - - Hintergrund - - - - - - - -->
+    <ImageView
+        android:id="@+id/terminuebersicht_hintergrund"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btn_terminuebersicht_suche"
+        android:src="@android:color/white"/>
+
+
+    <!-- - - - - - - - - - Suche - - - - - - - - - -->
+    <ImageButton
+        android:id="@+id/btn_terminuebersicht_suche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:src="@drawable/ic_suche"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_terminuebersicht_sucheEingabe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/btn_terminuebersicht_sucheEingabe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hussartani"
+        android:imeOptions="actionSearch"
+        android:background="@null"
+        android:layout_margin="10dp"
+        android:hint="@string/hierSucheEingeben"
+        android:lines="1"
+        android:singleLine="true"
+        android:src="@drawable/ic_suche"
+        app:layout_constraintBottom_toBottomOf="@id/btn_terminuebersicht_suche"
+        app:layout_constraintEnd_toStartOf="@+id/btn_terminuebersicht_suche"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- - - - - - - - - - Informationen - - - - - - - - - -->
     <!-- Liste an Terminen -->
     <ListView
         android:id="@+id/listView_alleTermine"
-
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/nav_terminuebersicht"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_terminuebersicht_kalender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="5dp">
-    </ListView>
+        app:layout_constraintTop_toBottomOf="@id/terminuebersicht_hintergrund" />
 
     <!-- - - - - - - - - - Navigation - - - - - - - - - -->
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/nav_terminuebersicht"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_terminuebersicht_freunde"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_freunde"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zuFreunden"
+        android:textSize="12sp"
+        android:textColor="@color/blaugrauTransparent"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_terminuebersicht_home"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_terminuebersicht_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_home"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zumStartbildschirm"
+        android:textColor="@color/blaugrauTransparent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_terminuebersicht_kalender"
+        app:layout_constraintStart_toEndOf="@+id/btn_terminuebersicht_freunde" />
+
+    <Button
+        android:id="@+id/btn_terminuebersicht_kalender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_kalender"
+        android:drawableTint="@color/blaugrauTransparent"
+        android:text="@string/zumKalender"
+        android:textColor="@color/blaugrauTransparent"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_terminuebersicht_termine"
+        app:layout_constraintStart_toEndOf="@+id/btn_terminuebersicht_home" />
+
+    <Button
+        android:id="@+id/btn_terminuebersicht_termine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_termin"
+        android:drawableTint="@android:color/white"
+        android:text="@string/zuTermineUebersicht"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:elevation="16dp"
-        app:itemIconTint="@color/blaugrauTransparent"
-        app:itemTextColor="@color/blaugrauTransparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:layout_constraintStart_toEndOf="@+id/btn_terminuebersicht_kalender" />
 
-    <!-- - - - - - - - - - Guilines - - - - - - - - - - - -->
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_alleTermine"
+
+    <!-- - - - - - - Add Button für neuen Termin - - - -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_terminuebersicht_neuerTermin"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="58dp" />
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        app:backgroundTint="@color/blaugrau"
+        app:layout_constraintBottom_toTopOf="@+id/btn_terminuebersicht_termine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add" />
 
 </android.support.constraint.ConstraintLayout>

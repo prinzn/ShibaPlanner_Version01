@@ -150,7 +150,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/startbildschirm_btn"
-        android:src="@drawable/ic_person_24dp"
+        android:src="@drawable/ic_user"
         android:contentDescription="@string/einloggen"
         app:layout_constraintCircle="@+id/image_startbildschirm_halbkreislinie"
         app:layout_constraintCircleAngle="106"
@@ -170,17 +170,17 @@
         app:layout_constraintStart_toEndOf="@id/empty"
         app:layout_constraintTop_toTopOf="@id/empty"/>
 
-    <!-- Button Einstellungen -->
+    <!-- Button Freunden -->
     <ImageButton
-        android:id="@+id/btn_Startbildschirm_ZuEinstellungen"
+        android:id="@+id/btn_Startbildschirm_ZuFreunden"
 
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/startbildschirm_btn"
-        android:src="@drawable/ic_einstellungen"
-        android:contentDescription="@string/zuEinstellungen"
+        android:src="@drawable/ic_freunde"
+        android:contentDescription="@string/zuFreunden"
         app:layout_constraintCircle="@+id/image_startbildschirm_halbkreislinie"
         app:layout_constraintCircleAngle="140"
         app:layout_constraintCircleRadius="135dp"
@@ -193,11 +193,11 @@
         style="@style/SchriftStartbildschirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/zuEinstellungen"
+        android:text="@string/zuFreunden"
         android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_Startbildschirm_ZuEinstellungen"
-        app:layout_constraintStart_toEndOf="@id/btn_Startbildschirm_ZuEinstellungen"
-        app:layout_constraintTop_toTopOf="@id/btn_Startbildschirm_ZuEinstellungen"/>
+        app:layout_constraintBottom_toBottomOf="@id/btn_Startbildschirm_ZuFreunden"
+        app:layout_constraintStart_toEndOf="@id/btn_Startbildschirm_ZuFreunden"
+        app:layout_constraintTop_toTopOf="@id/btn_Startbildschirm_ZuFreunden"/>
 
     <!-- - - - - - - - - - Guidlines - - - - - - -->
     <android.support.constraint.Guideline
